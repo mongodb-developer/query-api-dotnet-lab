@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "JEDEE - Jupyter EDEE",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "jedee",
+	"features": {
+		// https: //github.com/devcontainers/features/tree/main/src/python
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12"
+		},
+		"ghcr.io/devcontainers/features/dotnet:2.3.0": {
+        	"version": "9.0",
+        	"installUsingApt": true
+    	}
+	},
+	"updateContentCommand": "bash .devcontainer/setup.sh && bash .devcontainer/install-mongodb-db-tools.sh && bash .devcontainer/import.sh",
+	"postCreateCommand": "",
+	"postAttachCommand": "",
+	"postStartCommand": "jupyter trust dotnet/*.ipynb && jupyter notebook dotnet/*.ipynb --allow-root",
+	"customizations": {		
+		"vscode": {
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"mongodb.mongodb-vscode",
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.dotnet-interactive-vscode"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		8888,
+		27017
+	],
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+	// Use 'postCreateCommand' to run commands after the container is created.
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
