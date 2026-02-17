@@ -34,10 +34,10 @@ We use JEDEE during our Developer Days Labs, to speed up the time from theory to
 
 We aim to have the same set of examples for each supported language. Right now you have available:
 
-- [Java](/java)
-- [Python](/python/)
-- [Javascript](/javascript/)
-- [C#](/dotnet/)
+- [Java](https://github.com/mongodb-developer/query-api-java-lab)
+- [Python](https://github.com/mongodb-developer/query-api-python-lab)
+- [Javascript](https://github.com/mongodb-developer/query-api-js-lab)
+- [C#](https://github.com/mongodb-developer/query-api-dotnet-lab)
 
 ## Database
 
