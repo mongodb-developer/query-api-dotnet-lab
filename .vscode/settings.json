@@ -10,6 +10,14 @@
         "jedee/.vscode/mcp.json: Mongodb Local MCP Server": {
             "allowedModels": [
                 "copilot/gpt-4.1"
-            ]        }
-    }
+            ]
+        }
+    },
+    "files.exclude": {
+        ".github/": true,
+        ".devcontainer/": true,
+        ".vscode/": true,
+        ".gitignore": true
+    },
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
